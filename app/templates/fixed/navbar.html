@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <title>BLOG</title>
+</head>
+<body>
+    <nav>
+        <img src="{% static 'images/icons/menu.png' %}">
+        <img src="{% static 'images/logo.png' %}" class="logo">
+     <div class="navbar">
+        
+     </div>
+     <div class="search">
+        <img src="{% static 'images/icons/Search_icon.png' %}">
+        <input type="text" placeholder="Search">
+     </div>
+     <img src="{% static 'images/icons/Search_icon.png' %}">
+    </nav>
+    {% block content %}
+    {% endblock content %}
+    <script src=""></script>
+</body>
+</html>
