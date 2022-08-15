@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    background: linear-gradient(180deg, #374151 0%, #111827 100%);
+    min-height: 100vh;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-top: 70px;
+}
+nav > img{
+    width: 35px;
+    display: none;
+}
+nav >img.logo{
+    display: block;
+}
+nav .navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav .search {
+    position: relative;
+}
+nav .search img{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+nav .search input{
+    width: 224px;
+    height: 40px;
+    background: rgba(31, 41, 55, 0.6);
+    border-radius: 100px;
+    border: none;
+    color: white;
+    padding-left: 47px;
+    outline: none;
+}
+nav .search input::placeholder{
+    color: white;
+    opacity: 0.6;
+}
+@media screen and (max-width: 40rem) {
+    nav > img {
+        display: block;
+    }
+    nav .navbar,
+    nav .search{
+        display: none;
+    }
+}
