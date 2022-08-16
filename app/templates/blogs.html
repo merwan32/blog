@@ -1,29 +1,10 @@
 {% extends "navbar.html" %}
 {% load static %}
 {% block content %}
-
-    <header>
-        <div><img src="{{head.image.url}}"></div>
-        
-        <div >
-        <div class="type">{{head.type}}    *  {{head.time}}</div>
-        <div class="title">{{head.titre}}</div>
-        <div class="description">{{head.text}}</div>
-        
-        <div class="profile">
-        <img src="{{head.profile.profile_picture.url}}">
-        <div class="profile-desc">
-        <div>{{head.profile.user.username}}</div>
-        <div>{{head.profile.work}}</div>
-        </div>
-        </div>
-        </div>
-    </header>
-
     <main>
     {% for post in posts %}
         <div class="post">
-     <div><img src="{{ post.image.url}}"></div>
+         <div><img src="{{ post.image.url}}"></div>
         
         <div >
         <div class="type">{{ post.type}}    *  {{ post.time}}</div>
