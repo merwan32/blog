@@ -4,7 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Patrick Hand', cursive;
 }
 
 ::-webkit-scrollbar {
@@ -43,7 +43,7 @@ nav  img{
     width: 35px;
     display: none;
 }
-nav >img.logo{
+nav img.logo{
     display: block;
 }
 nav .navbar{
@@ -168,6 +168,32 @@ color: #FFFFFF;
 }
 main .post{
     width: 340px;
+}
+.searchtxt {
+    font-style: normal;
+font-weight: 400;
+font-size: 34px;
+line-height: 28px;
+text-align: center;
+color: #FFFFFF;
+margin: 100px 0;
+}
+.noresult{
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 30px;
+text-align: center;
+color: #FFFFFF;
+margin: auto;
+}
+.noresult div:first-child{
+    font-size: 64px;
+line-height: 87px;
 }
 @media screen and (max-width: 58rem) {
     nav  img {
