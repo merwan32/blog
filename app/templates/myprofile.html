@@ -3,13 +3,12 @@
 {% block content %}
     <div class="header">
        <div><img src="{{profile.profile_picture.url}}">
-       <form method="POST" enctype="multipart/form-data">
+       <form method="POST" enctype="multipart/form-data" name="profilepic">
          {% csrf_token %}
          <label for="input">
             <div><img src="{%static 'images/icons/changepic.png'%}"></div>
             <input type="file" name="img" id="input" accept="image/png, image/jpg, image/gif, image/jpeg">
            </label>
-            <input type="submit">
          <form></div>
        <div>
     <div>{{profile.user.username}}</div>

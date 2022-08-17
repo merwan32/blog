@@ -30,7 +30,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    padding-top: 70px;
+    margin-top: 30px;
 }
 nav button {
     background: none;
@@ -70,6 +70,8 @@ nav .right span{
 }
 nav .search {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 nav .search img{
     position: absolute;
@@ -204,7 +206,7 @@ font-size: 34px;
 line-height: 28px;
 text-align: center;
 color: #FFFFFF;
-margin: 100px 0;
+margin: 100px 0 30px;
 }
 .noresult{
     max-width: 520px;
@@ -255,11 +257,13 @@ line-height: 87px;
 }
 .header img{
     width: 300px;
+    height: 300px;
     border-radius: 50%;
 }
 .header label img{
     border-radius: 0;
     width: 30px;
+    height: 30px;
     cursor: pointer;
 }
 .header form input{
