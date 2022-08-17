@@ -23,13 +23,21 @@ def addblog(request):
         titre = request.POST['titre']
         text = request.POST['text']
         posts = Post.objects.create(profile=profile,image=post,type=type,titre=titre,text=text)
-        return render(request,'myprofile.html')
+        return redirect('myprofile')
     return render(request,'addblog.html')
 
 def my_profile(request):
     posts= Post.objects.filter(profile__user=request.user).order_by('-id')
     profile = Profile.objects.get(user=request.user)
+    if request.method == "POST":
+        profile.profile_picture = request.FILES['img']
+        profile.save()
     return render(request,'myprofile.html',{'posts':posts,'profile':profile})
+
+def profile(request,id):
+    posts= Post.objects.filter(profile__id=id).order_by('-id')
+    profile = Profile.objects.get(id=id)
+    return render(request,'profile.html',{'posts':posts,'profile':profile})
 
 
 def search(request):
@@ -69,4 +77,4 @@ def signup(request):
 
 def signout(request):
     logout(request)
-    return redirect('signin')
+    return redirect('home')

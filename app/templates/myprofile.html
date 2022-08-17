@@ -2,7 +2,15 @@
 {% load static %}
 {% block content %}
     <div class="header">
-       <div><img src="{{profile.profile_picture.url}}"></div>
+       <div><img src="{{profile.profile_picture.url}}">
+       <form method="POST" enctype="multipart/form-data">
+         {% csrf_token %}
+         <label for="input">
+            <div><img src="{%static 'images/icons/changepic.png'%}"></div>
+            <input type="file" name="img" id="input" accept="image/png, image/jpg, image/gif, image/jpeg">
+           </label>
+            <input type="submit">
+         <form></div>
        <div>
     <div>{{profile.user.username}}</div>
     <div>{{profile.user.email}}</div>
@@ -12,7 +20,8 @@
     <main>
     {% for post in posts %}
         <div class="post">
-         <div class="img"><img src="{{ post.image.url}}"></div>
+         <div class="img"><img src="{{ post.image.url}}">
+         </div>
         
         <div >
         <div class="type">{{ post.type}}    *  {{ post.time}}</div>
@@ -20,7 +29,7 @@
         <div class="description">{{ post.text}}</div>
         
         <div class="profile">
-        <img src="{{ post.profile.profile_picture.url}}">
+        <a href="/{{post.profile.id}}/profile"><img src="{{ post.profile.profile_picture.url}}"></a>
         <div class="profile-desc">
         <div>{{ post.profile.user.username}}</div>
         <div>{{ post.profile.work}}</div>
