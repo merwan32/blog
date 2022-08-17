@@ -24,3 +24,12 @@ function search() {
         showinput = true
     }
 }
+
+
+var intervalId = window.setInterval(function(){
+    profilepic = document.getElementById('input').value
+    if (profilepic != '') {
+        document.forms['profilepic'].submit()
+        clearInterval(intervalId) 
+    }
+},1000)
