@@ -2,5 +2,20 @@
 {% load static %}
 {% block content %}
 
-detail
+  <div class="post detail"> 
+          <div class="type">{{ post.type}}    *  {{ post.time}}</div>
+          <div class="title">{{ post.titre}}</div>
+        
+        
+        <div class="profile">
+                <a href="/{{post.profile.id}}/profile"><img src="{{ post.profile.profile_picture.url}}"></a>
+         <div class="profile-desc">
+         <div>{{ post.profile.user.username}}</div>
+         <div>{{ post.profile.work}}</div>
+         </div>
+        </div>
+        <div class="img"><img src="{{ post.image.url}}"></div>
+        <div class="description">{{ post.text}}</div>
+
+    </div>
 {% endblock content %}
