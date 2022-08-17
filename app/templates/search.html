@@ -8,19 +8,18 @@
     <main>
     {% for post in posts %}
     <div class="post">
-     <div><img src="{% static 'images/post.jpg' %}"></div>
+         <div class="img"><img src="{{ post.image.url}}"></div>
         
         <div >
-        <div class="type">UI DESIGN    *  July 2,2022</div>
-        <div class="title">Understanding color theory: the color wheel and finding complementary colors</div>
-        <div class="description">Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
-        Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.</div>
+        <div class="type">{{ post.type}}    *  {{ post.time}}</div>
+        <div class="title">{{ post.titre}}</div>
+        <div class="description">{{ post.text}}</div>
         
         <div class="profile">
-        <img src="{% static 'images/pic.jpg' %}">
+        <img src="{{ post.profile.profile_picture.url}}">
         <div class="profile-desc">
-        <div>merwan bekkar</div>
-        <div>UI Designer</div>
+        <div>{{ post.profile.user.username}}</div>
+        <div>{{ post.profile.work}}</div>
         </div>
         </div>
         </div>
