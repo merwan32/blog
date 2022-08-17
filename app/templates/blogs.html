@@ -12,7 +12,7 @@
         <div class="description">{{ post.text}}</div>
         
         <div class="profile">
-        <img src="{{ post.profile.profile_picture.url}}">
+        <a href="/{{post.profile.id}}/profile"><img src="{{ post.profile.profile_picture.url}}"></a>
         <div class="profile-desc">
         <div>{{ post.profile.user.username}}</div>
         <div>{{ post.profile.work}}</div>

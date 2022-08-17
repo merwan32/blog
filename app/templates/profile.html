@@ -1,13 +1,17 @@
 {% extends "navbar.html" %}
 {% load static %}
 {% block content %}
-
-<div class="searchtxt">Search: {{search}}</div>
-{% if posts %}
-    <div class="result">
+    <div class="header">
+       <div><img src="{{profile.profile_picture.url}}"></div>
+       <div>
+    <div>{{profile.user.username}}</div>
+    <div>{{profile.user.email}}</div>
+    <div>{{profile.work}}</div>
+    </div>
+    </div>
     <main>
     {% for post in posts %}
-    <div class="post">
+        <div class="post">
          <div class="img"><img src="{{ post.image.url}}"></div>
         
         <div >
@@ -23,17 +27,7 @@
         </div>
         </div>
         </div>
-    </div>
+     </div>
     {% endfor %}
-
     </main>
-    </div>
-{% else %}
-<div class="noresult">
-<div>No result 😥</div>
-<div>We couldn’t find any posts with the keyword `{{search}}`. Please try another keyword.</div>
-</div>
-{% endif %}
-
-
 {% endblock content %}

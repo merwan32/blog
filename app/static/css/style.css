@@ -110,6 +110,7 @@ main{
 }
 main.form{
     margin-top: 0;
+    justify-content: center;
 }
 main .post{
     margin: 30px;
@@ -232,15 +233,36 @@ line-height: 87px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .header >div:nth-child(2){
     align-items: flex-start;
     font-size: 35px;
     color: white;
 }
-.header img{
-    max-width: 300px;
+.header label >div{
+    width: 50px;
+    background: #111827;
+    height: 50px;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header img{
+    width: 300px;
+    border-radius: 50%;
+}
+.header label img{
+    border-radius: 0;
+    width: 30px;
+    cursor: pointer;
+}
+.header form input{
+    display: none;
 }
 @media screen and (max-width: 58rem) {
     nav  img {
@@ -261,6 +283,9 @@ line-height: 87px;
     }
 
     
+    main .post{
+        margin: auto;
+    }
     nav .search input{
         width: 0px;
         padding: 0;
