@@ -23,7 +23,7 @@ body{
     width: 100vw;
     overflow-x: hidden;
     background: linear-gradient(180deg, #374151 0%, #111827 100%);
-    min-height: 100vh;
+    
 }
 nav{
     display: flex;
@@ -60,6 +60,14 @@ color: #FFFFFF;
 margin: 0 20px;
 text-decoration: none;
 }
+nav .right{
+    display: flex;
+    align-items: center;
+}
+nav .right span{
+    color: white;
+    margin-left:15px ;
+}
 nav .search {
     position: relative;
 }
@@ -93,13 +101,22 @@ header{
     gap: 25px;
 }
 main{
-    margin: 60px 100px 20px;
+    margin: 60px 0px 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
+    width: 100vw;
+    padding: 0 50px;
+}
+main.form{
+    margin-top: 0;
 }
 main .post{
-    margin: 30px 0;
+    margin: 30px;
+}
+header>div:first-child img{
+    min-width: 100%;
+    min-height: 100%;
 }
 header> div,
 main>div{
@@ -108,9 +125,18 @@ main>div{
     display: flex;
     flex-direction: column;
 }
-  img{
-    width: 100%;
+main  .img{
+    width:340px ;
+    height: 230px;
+    overflow: hidden;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .img img{
+    min-width: 100%;
+    min-height: 100%;
 }
   .type{
     margin-top: 10px;
@@ -195,6 +221,27 @@ margin: auto;
     font-size: 64px;
 line-height: 87px;
 }
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 15px 50px;
+}
+.header > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header >div:nth-child(2){
+    align-items: flex-start;
+    font-size: 35px;
+    color: white;
+}
+.header img{
+    max-width: 300px;
+    border-radius: 50%;
+}
 @media screen and (max-width: 58rem) {
     nav  img {
         display: block;
@@ -209,7 +256,7 @@ line-height: 87px;
         top: 120px;
         left: -100vw;
         flex-direction: column;
-        background: #11182737;
+        background: #111827af;
         transition: all 0.5s;
     }
 
@@ -226,4 +273,12 @@ line-height: 87px;
         margin: 60px 30px 20px;
     }
     
+}
+@media screen and (max-width:40rem){
+    .header{
+        grid-template-columns: 1fr;
+    }
+    .header >div:nth-child(2){
+        align-items: center;
+    }
 }
